@@ -80,3 +80,25 @@ JFK,John F Kennedy International,-37,41
 FROM,TO,DEPARTURE,DURATION
 BEG,LHR,17:10,170
 LHR,JFK,08:30,420
+
+#JSON Format
+```json
+{
+  "airports": [
+    {"code": "LHR", "name": "London Heathrow", "x": 0, "y": 51},
+    {"code": "BEG", "name": "Belgrade Nikola Tesla", "x": 10, "y": 45}
+  ],
+  "flights": [
+    {"from": "BEG", "to": "LHR", "departure": "17:10", "duration": 170}
+  ]
+}
+⏳ Inactivity & Safety Features
+To optimize system memory and simulate automatic session timeouts:
+
+A background timer tracks user input events (mouse movements, key presses, clicks).
+
+If no input is registered for 55 seconds, a modal popup alerts the user.
+
+If the user confirms within 5 seconds, the session resets; otherwise, the application safely terminates.
+
+The timer is automatically paused during active map selections and simulation runs.
